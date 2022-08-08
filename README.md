@@ -2,7 +2,7 @@
 
 PM2 development environment monitor using independent mode.
 
-With this tool you can more than one project in development mode in different terminal sessions, so they do not share output and do not conflict (in opposed to standard `pm2-dev`).
+With this tool you can run more than one project in development mode in different terminal sessions, so they do not share output and do not conflict (in opposed to standard `pm2-dev`).
 
 ## Installation
 
