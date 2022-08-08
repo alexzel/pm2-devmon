@@ -1,6 +1,6 @@
 {
   "name": "pm2-devmon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PM2 development environment monitor",
   "keywords": [
     "pm2",
