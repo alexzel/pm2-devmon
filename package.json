@@ -22,10 +22,11 @@
     "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main"
   },
   "files": [
-    "src"
+    "src",
+    "bin"
   ],
   "bin": {
-    "pm2-devmon": "bin/pm2-devmon"
+    "pm2-devmon": "./bin/pm2-devmon"
   },
   "devDependencies": {
     "eslint": "^8.21.0",
