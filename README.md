@@ -27,13 +27,13 @@ pm2-devmon start app.js
 or run config script
 
 ```sh
-pm2-devmon --raw start pm2.config.js
+pm2-devmon start pm2.config.js --raw
 ```
 
 or run process config file
 
 ```sh
-pm2-devmon --raw start process.json
+pm2-devmon start process.json --raw --env dev
 ```
 
 ## Options
