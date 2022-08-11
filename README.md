@@ -18,13 +18,19 @@ npm install pm2 pm2-devmon
 
 ## Usage
 
-Run server scripts
+Run application script
 
 ```sh
-pm2-devmon start server.js
+pm2-devmon start app.js
 ```
 
-or run process config files
+or run config script
+
+```sh
+pm2-devmon --raw start pm2.config.js
+```
+
+or run process config file
 
 ```sh
 pm2-devmon --raw start process.json
@@ -34,9 +40,9 @@ pm2-devmon --raw start process.json
 
 ```
 Options:
-  -v, --version                      output the current version
-  --raw                              raw log output
-  --ignore [files]                   files list to ignore watching
-  --env [name]                       env_[name] env variables in process file
-  -h, --help                         output usage information
+  -r, --raw      Raw output                           [boolean] [default: false]
+  -e, --env      Environment name from env_[name]         [string] [default: ""]
+  -i, --ignore   Files list to ignore watching             [array] [default: []]
+  -v, --version  Show version number                                   [boolean]
+  -h, --help     Show help                                             [boolean]
 ```
