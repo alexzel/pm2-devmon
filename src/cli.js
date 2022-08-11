@@ -12,11 +12,11 @@ const log = (...msg) =>
   console.log('\x1b[32m%s\x1b[0m', ...msg)
 
 commander.version(version, '-v, --version', 'output the current version')
-  .description('pm2-devmon development environment monitor using independent mode')
+  .description('pm2-devmon development environment monitor running in independent mode')
   .option('--raw', 'raw log output')
   .option('--ignore [files]', 'files list to ignore watching')
   .option('--env [name]', 'env_[name] env variables in process file')
-  .usage('pm2-devmon start process.json')
+  .usage('pm2-devmon start <app.js|pm2.config.js|process.json>')
 
 commander.exitOverride(err => {
   if (err.code === 'commander.unknownOption' || err.code === 'commander.missingArgument') {
@@ -26,7 +26,7 @@ commander.exitOverride(err => {
 
 const pm2 = new PM2({ independent: true })
 
-commander.command('start <js|config.js|process.json>')
+commander.command('start <app.js|pm2.config.js|process.json>')
   .description('start script or config or process file')
   .action((cmd, opts) => {
     commander.watch = true
