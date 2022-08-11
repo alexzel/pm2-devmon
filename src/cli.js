@@ -3,43 +3,60 @@
 process.env.PM2_NO_INTERACTION = 'true'
 process.env.PM2_DISCRETE_MODE = true
 
-const commander = require('commander')
 const { custom: PM2 } = require('pm2')
 const Log = require('pm2/lib/API/Log')
-const { version } = require('../package.json')
+
+const yargs = require('yargs')
+const { hideBin } = require('yargs/helpers')
 
 const log = (...msg) =>
   console.log('\x1b[32m%s\x1b[0m', ...msg)
 
-commander.version(version, '-v, --version', 'output the current version')
-  .description('pm2-devmon development environment monitor running in independent mode')
-  .option('--raw', 'raw log output')
-  .option('--ignore [files]', 'files list to ignore watching')
-  .option('--env [name]', 'env_[name] env variables in process file')
-  .usage('pm2-devmon start <app.js|pm2.config.js|process.json>')
+/* eslint-disable no-unused-expressions */
+yargs(hideBin(process.argv))
+  .version()
+  .alias('v', 'version')
 
-commander.exitOverride(err => {
-  if (err.code === 'commander.unknownOption' || err.code === 'commander.missingArgument') {
-    commander.outputHelp()
-  }
-})
+  .scriptName('pm2-devmon')
+  .usage('Usage: $0 start <file> [options]')
 
-const pm2 = new PM2({ independent: true })
-
-commander.command('start <app.js|pm2.config.js|process.json>')
-  .description('start script or config or process file')
-  .action((cmd, opts) => {
-    commander.watch = true
-    commander.autorestart = true
-    commander.restart_delay = 2500
-
-    if (commander.ignore) {
-      commander.ignore_watch = commander.ignore.split(',')
-      commander.ignore_watch.push('node_modules')
+  .command('start <file> [-r] [-i files] [-e name]', 'Start PM2 development monitor', yargs =>
+    yargs
+      .positional('file', {
+        describe: 'PM2 config file or application script',
+        type: 'string'
+      })
+      .option('e', {
+        alias: 'env',
+        describe: 'Environment name from env_[name] field',
+        type: 'string',
+        default: ''
+      })
+      .option('r', {
+        alias: 'raw',
+        describe: 'Raw output',
+        type: 'boolean',
+        default: false
+      })
+      .option('i', {
+        alias: 'ignore',
+        describe: 'Files list to ignore watching',
+        type: 'array',
+        default: []
+      })
+  , ({ file, env, raw, ignore }) => {
+    const pm2 = new PM2({ independent: true })
+    const opts = {
+      watch: true,
+      autorestart: true,
+      restart_delay: 2500,
+      env,
+      ignore_watch: ignore
+        .concat(ignore.length ? 'node_modules' : [])
     }
 
     pm2.connect(() => {
-      pm2.start(cmd, commander, (err, apps) => {
+      pm2.start(file, opts, (err, apps) => {
         if (err) {
           console.error(err)
           pm2.destroy(() => process.exit(0))
@@ -47,7 +64,7 @@ commander.command('start <app.js|pm2.config.js|process.json>')
           log('Apps:', apps.map(app => app.pm2_env.name))
           log('Processes:', apps.map(app => app.process.pid))
 
-          Log.devStream(pm2.Client, 'all', commander.raw, false, false)
+          Log.devStream(pm2.Client, 'all', raw, false, false)
 
           process.on('SIGINT', () => {
             log('Stopping...')
@@ -58,4 +75,9 @@ commander.command('start <app.js|pm2.config.js|process.json>')
     })
   })
 
-commander.parse(process.argv)
+  .demandCommand()
+  .recommendCommands()
+  .strict()
+  .help()
+  .alias('h', 'help')
+  .argv
