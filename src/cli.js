@@ -20,23 +20,23 @@ yargs(hideBin(process.argv))
   .scriptName('pm2-devmon')
   .usage('Usage: $0 start <file> [options]')
 
-  .command('start <file> [-r] [-i files] [-e name]', 'Start PM2 development monitor', yargs =>
+  .command('start <file> [-r] [-e name] [-i files]', 'Start PM2 development monitor', yargs =>
     yargs
       .positional('file', {
         describe: 'PM2 config file or application script',
         type: 'string'
-      })
-      .option('e', {
-        alias: 'env',
-        describe: 'Environment name from env_[name] field',
-        type: 'string',
-        default: ''
       })
       .option('r', {
         alias: 'raw',
         describe: 'Raw output',
         type: 'boolean',
         default: false
+      })
+      .option('e', {
+        alias: 'env',
+        describe: 'Environment name from env_[name]',
+        type: 'string',
+        default: ''
       })
       .option('i', {
         alias: 'ignore',
