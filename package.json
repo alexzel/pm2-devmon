@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./src",
-    "test": "echo no tests implemented for this package",
+    "test": "jest",
     "pretest": "yarn run lint",
     "release": "yarn version",
     "preversion": "yarn install && yarn test",
@@ -46,7 +46,9 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-promise": "^6.0.1"
+    "eslint-plugin-promise": "^6.0.1",
+    "jest": "^29.0.3",
+    "pm2": "^5.2.0"
   },
   "peerDependencies": {
     "pm2": ">= 5.2.0 < 6"
