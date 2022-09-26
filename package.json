@@ -42,11 +42,11 @@
     "pm2-devmon": "./bin/pm2-devmon"
   },
   "devDependencies": {
-    "eslint": "^8.21.0",
+    "eslint": "^8.24.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.0.1"
   },
   "peerDependencies": {
     "pm2": ">= 5.2.0 < 6"
