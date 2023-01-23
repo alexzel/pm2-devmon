@@ -1,6 +1,6 @@
 'use strict'
 
-const log = require('../src/log')
+const log = require('../lib/log')
 
 describe('log', () => {
   let consoleLog

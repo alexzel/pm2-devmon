@@ -1,7 +1,7 @@
 'use strict'
 
 const { custom: PM2 } = require('pm2')
-const start = require('../src/start')
+const start = require('../lib/start')
 
 const OPTIONS = {
   file: 'test-file',
