@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1](https://github.com/alexzel/pm2-devmon/compare/v1.2.0...v1.2.1) (2023-01-23)
+
+  * Fix changelog script
+  * Fix changelog
+  * Add custom changelog script and gather previous changelog items
+
 ## [1.2.0](https://github.com/alexzel/pm2-devmon/compare/v1.1.3...v1.2.0) (2023-01-23)
 
   * Remove lib from gitignore file
