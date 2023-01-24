@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.4](https://github.com/alexzel/pm2-devmon/compare/v1.2.3...v1.2.4) (2023-01-23)
+
+  * Update variable names in the release scripts
+  * Bump dependencies
+
 ## [1.2.3](https://github.com/alexzel/pm2-devmon/compare/v1.2.2...v1.2.3) (2023-01-23)
 
   * Fix commit message body in the release script
