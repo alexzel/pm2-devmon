@@ -22,6 +22,8 @@
     "manager",
     "tools"
   ],
+  "homepage": "https://github.com/alexzel/pm2-devmon#readme",
+  "bugs": "https://github.com/alexzel/pm2-devmon/issues",
   "repository": "https://github.com/alexzel/pm2-devmon.git",
   "author": "Alex Zelensky",
   "license": "MIT",
@@ -30,10 +32,12 @@
     "test": "jest",
     "pretest": "yarn run lint",
     "release": "yarn version",
-    "preversion": "yarn install && yarn test",
+    "preversion": "yarn install && yarn test && yarn changelog",
     "postversion": "git push --tags && yarn publish . --new-version $npm_package_version && git push && echo Successfully released version $npm_package_version!",
-    "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main"
+    "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main",
+    "changelog": "read -p \"Changelog version: \" CHANGELOG_VERSION; touch CHANGELOG.md; CHANGELOG_TAGS=($(git tag -l --sort=-version:refname)); CHANGELOG_LAST_TAG=${CHANGELOG_TAGS[1]}; CHANGELOG_COMMITS=$(git log $CHANGELOG_LAST_TAG..HEAD --no-merges --oneline --pretty=format:\"  * %s\"); CHANGELOG_MESSAGE=$(echo \"\n## [$CHANGELOG_VERSION](${npm_package_repository_url:0:$(expr ${#npm_package_repository_url} - 4)}/compare/$CHANGELOG_LAST_TAG...v$CHANGELOG_VERSION) (`date +%F`)\n\n$CHANGELOG_COMMITS\n\"); (head -n 1 CHANGELOG.md;echo \"$CHANGELOG_MESSAGE\";tail -n +2 CHANGELOG.md;) > CHANGELOG.new.md; head -n 40 CHANGELOG.md && printf '.%.0s' {1..20} && printf '\n'; read -r -p \"Proceed with the changes? [y/N]\"; echo; if [[ $REPLY =~ ^[Yy]$ ]];then mv CHANGELOG.new.md CHANGELOG.md;else rm -f CHANGELOG.new.md;fi; echo Done."
   },
+  "main": "lib/start.js",
   "files": [
     "lib",
     "bin"
