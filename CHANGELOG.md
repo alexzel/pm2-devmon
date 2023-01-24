@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.2](https://github.com/alexzel/pm2-devmon/compare/v1.2.1...v1.2.2) (2023-01-23)
+
+  * Add extra new line to release commit message
+  * Improve release scripts with cleanups and adjust commit message
+  * Fix branch in release scripts
+  * Refactor release and changelog scripts
+  * Add missing release to changelog
+
 ## [1.2.1](https://github.com/alexzel/pm2-devmon/compare/v1.2.0...v1.2.1) (2023-01-23)
 
   * Fix changelog script
