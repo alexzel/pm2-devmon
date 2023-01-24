@@ -31,7 +31,7 @@
     "lint": "eslint ./lib",
     "test": "jest",
     "pretest": "yarn run lint",
-    "release": "branch=$(git rev-parse --abbrev-ref HEAD); tags=($(git tag -l --sort=-version:refname)); last_tag=${tags[0]}; echo \"Last version: ${last_tag:1}\"; read -p \"New version: \" version && export NPM_RELEASE_VERSION=$version && export NPM_RELEASE_LAST_TAG=$last_tag && export $NPM_RELEASE_BRANCH=$branch; yarn commits",
+    "release": "tags=($(git tag -l --sort=-version:refname)); last_tag=${tags[0]}; echo \"Last version: ${last_tag:1}\"; read -p \"New version: \" version && export NPM_RELEASE_VERSION=$version && export NPM_RELEASE_LAST_TAG=$last_tag && export NPM_RELEASE_BRANCH=$(git rev-parse --abbrev-ref HEAD) && yarn commits",
     "prerelease": "yarn install && yarn test",
     "commits": "export NPM_RELEASE_COMMITS=$(git log $NPM_RELEASE_LAST_TAG...HEAD --no-merges --oneline --pretty=format:\"  * %s\") && yarn message",
     "message": "export NPM_RELEASE_MESSAGE=$(echo \"## [$NPM_RELEASE_VERSION](${npm_package_repository_url:0:$(expr ${#npm_package_repository_url} - 4)}/compare/$NPM_RELEASE_LAST_TAG...v$NPM_RELEASE_VERSION) (`date +%F`)\n\n$NPM_RELEASE_COMMITS\") && yarn confirm",
