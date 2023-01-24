@@ -36,7 +36,7 @@
     "commits": "export NPM_RELEASE_COMMITS=$(git log $NPM_RELEASE_LAST_TAG...HEAD --no-merges --oneline --pretty=format:\"  * %s\") && yarn message",
     "message": "export NPM_RELEASE_MESSAGE=$(echo \"## [$NPM_RELEASE_VERSION](${npm_package_repository_url:0:$(expr ${#npm_package_repository_url} - 4)}/compare/$NPM_RELEASE_LAST_TAG...v$NPM_RELEASE_VERSION) (`date +%F`)\n\n$NPM_RELEASE_COMMITS\") && yarn confirm",
     "confirm": "echo \"\n${NPM_RELEASE_MESSAGE}\n\"; read -r -p \"Proceed with the changes? [y/N]\";echo;if [[ $REPLY =~ ^[Yy]$ ]];then yarn proceed;fi;",
-    "proceed": "echo \"$(head -n 1 CHANGELOG.md)\n\n${NPM_RELEASE_MESSAGE}\n$(tail -n +2 CHANGELOG.md)\" > CHANGELOG.md && yarn version --no-git-tag-version --new-version $NPM_RELEASE_VERSION && git add . && (echo \"v${NPM_RELEASE_VERSION}\n\n${NPM_RELEASE_MESSAGE}\" | git commit -F -) && git tag v$NPM_RELEASE_VERSION && yarn push",
+    "proceed": "echo \"$(head -n 1 CHANGELOG.md)\n\n${NPM_RELEASE_MESSAGE}\n$(tail -n +2 CHANGELOG.md)\" > CHANGELOG.md && yarn version --no-git-tag-version --new-version $NPM_RELEASE_VERSION && git add . && (echo \"v${NPM_RELEASE_VERSION}\n\n${NPM_RELEASE_COMMITS}\" | git commit -F -) && git tag v$NPM_RELEASE_VERSION && yarn push",
     "push": "read -r -p \"Push ${NPM_RELEASE_BRANCH} to github? [y/N]\";echo;if [[ $REPLY =~ ^[Yy]$ ]];then git push origin $NPM_RELEASE_BRANCH --tags && yarn publish . --new-version $NPM_RELEASE_VERSION;else yarn cleanup;fi;",
     "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main"
   },
