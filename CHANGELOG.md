@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.3](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.2...v1.3.3) (2023-01-29)
+
+  * Update bugs and repository sections in the package.json file
+
 ## [1.3.2](https://github.com/alexzel/pm2-devmon/compare/v1.3.1...v1.3.2) (2023-01-29)
 
   * Revert package.json changes and add test folder into files list
