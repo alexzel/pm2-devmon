@@ -41,12 +41,11 @@
     "cleanup": "git tag -d $(git tag) && git fetch --all --tags && git clean --force -d -x && git reset --hard origin/main && git checkout main"
   },
   "main": "lib/start.js",
-  "files": [
-    "lib",
-    "bin"
-  ],
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
+  },
+  "directories": {
+    "lib": "./lib"
   },
   "devDependencies": {
     "eslint": "^8.32.0",
