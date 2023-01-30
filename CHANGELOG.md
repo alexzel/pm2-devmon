@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.1](https://github.com/alexzel/pm2-devmon/compare/v1.4.0...v1.4.1) (2023-01-29)
+
+  * Add link examples link into readme file
+  * Fix type in the example readme
+  * Add examples with simple http server and dev/prod config
+
 ## [1.4.0](https://github.com/alexzel/pm2-devmon/compare/v1.3.8...v1.4.0) (2023-01-29)
 
   * Revert .github in package.json
