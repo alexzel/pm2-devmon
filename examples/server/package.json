@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Simple server with PM2 and PM2 Devmon",
+  "main": "server.js",
+  "scripts": {
+    "dev": "pm2-devmon start pm2.config.js --raw --env dev",
+    "start": "pm2 start pm2.config.js --env prod",
+    "stop": "pm2 delete pm2.config.js --env prod",
+    "restart": "pm2 restart pm2.config.js --env prod",
+    "status": "pm2 status",
+    "log": "pm2 log @myapp/server"
+  },
+  "dependencies": {
+    "pm2": "^5.x.x",
+    "pm2-devmon": "^1.x.x"
+  }
+}
