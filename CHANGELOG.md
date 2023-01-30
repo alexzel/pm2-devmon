@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.8](https://github.com/alexzel/pm2-devmon/compare/v1.3.7...v1.3.8) (2023-01-29)
+
+  * Add .github file into package.json file
+  * Remove directories section
+
 ## [1.3.7](https://github.com/alexzel/pm2-devmon/compare/v1.3.6...v1.3.7) (2023-01-29)
 
   * Revert unnecessary package.json changes and add directories
