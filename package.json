@@ -44,7 +44,8 @@
   "files": [
     "lib",
     "bin",
-    "test"
+    "test",
+    ".travis.yml"
   ],
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
