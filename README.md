@@ -36,6 +36,8 @@ or run process config file
 pm2-devmon start process.json --raw --env dev
 ```
 
+See [examples](./examples/) for more details.
+
 ## Options
 
 ```
