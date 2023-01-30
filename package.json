@@ -46,9 +46,6 @@
     "bin",
     "test"
   ],
-  "directories": {
-    "test": "test"
-  },
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
   },
