@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.5](https://github.com/alexzel/pm2-devmon/compare/v1.4.4...v1.4.5) (2023-01-29)
+
+  * Remove travis file and cleanup package.json
+
 ## [1.4.4](https://github.com/alexzel/pm2-devmon/compare/v1.4.3...v1.4.4) (2023-01-29)
 
   * Add .travis.yml (we may need it)
