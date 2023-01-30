@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.2](https://github.com/alexzel/pm2-devmon/compare/v1.3.1...v1.3.2) (2023-01-29)
+
+  * Revert package.json changes and add test folder into files list
+
 ## [1.3.1](https://github.com/alexzel/pm2-devmon/compare/v1.3.0...v1.3.1) (2023-01-29)
 
   * Add test folder into npmignore list
