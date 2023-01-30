@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.0](https://github.com/alexzel/pm2-devmon/compare/v1.2.4...v1.3.0) (2023-01-29)
+
+  * Remove files section, add directories section, and add npmignore file
+
 ## [1.2.4](https://github.com/alexzel/pm2-devmon/compare/v1.2.3...v1.2.4) (2023-01-23)
 
   * Update variable names in the release scripts
