@@ -44,8 +44,7 @@
   "files": [
     "lib",
     "bin",
-    "test",
-    "examples"
+    "test"
   ],
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
