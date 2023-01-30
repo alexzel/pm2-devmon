@@ -27,19 +27,19 @@
 
   * Revert unnecessary package.json changes and add directories
 
-## [1.3.6](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.5...v1.3.6) (2023-01-29)
+## [1.3.6](https://github.com/alexzel/pm2-devmon/compare/v1.3.5...v1.3.6) (2023-01-29)
 
   * Rename node-ci -> ci
 
-## [1.3.5](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.4...v1.3.5) (2023-01-29)
+## [1.3.5](https://github.com/alexzel/pm2-devmon/compare/v1.3.4...v1.3.5) (2023-01-29)
 
   * Add yarn lock file into files list
 
-## [1.3.4](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.3...v1.3.4) (2023-01-29)
+## [1.3.4](https://github.com/alexzel/pm2-devmon/compare/v1.3.3...v1.3.4) (2023-01-29)
 
   * Update author section and add engines
 
-## [1.3.3](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.2...v1.3.3) (2023-01-29)
+## [1.3.3](https://github.com/alexzel/pm2-devmon/compare/v1.3.2...v1.3.3) (2023-01-29)
 
   * Update bugs and repository sections in the package.json file
 
