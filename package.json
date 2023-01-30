@@ -23,8 +23,13 @@
     "tools"
   ],
   "homepage": "https://github.com/alexzel/pm2-devmon#readme",
-  "bugs": "https://github.com/alexzel/pm2-devmon/issues",
-  "repository": "https://github.com/alexzel/pm2-devmon.git",
+  "bugs": {
+    "url": "https://github.com/alexzel/pm2-devmon/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexzel/pm2-devmon.git"
+  },
   "author": "Alex Zelensky",
   "license": "MIT",
   "scripts": {
