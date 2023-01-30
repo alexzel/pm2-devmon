@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.7](https://github.com/alexzel/pm2-devmon/compare/v1.3.6...v1.3.7) (2023-01-29)
+
+  * Revert unnecessary package.json changes and add directories
+
 ## [1.3.6](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.5...v1.3.6) (2023-01-29)
 
   * Rename node-ci -> ci
