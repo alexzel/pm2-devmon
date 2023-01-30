@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.4](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.3...v1.3.4) (2023-01-29)
+
+  * Update author section and add engines
+
 ## [1.3.3](git+https://github.com/alexzel/pm2-devmon/compare/v1.3.2...v1.3.3) (2023-01-29)
 
   * Update bugs and repository sections in the package.json file
