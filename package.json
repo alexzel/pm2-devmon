@@ -23,14 +23,9 @@
     "tools"
   ],
   "homepage": "https://github.com/alexzel/pm2-devmon#readme",
-  "bugs": {
-    "url": "https://github.com/alexzel/pm2-devmon/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexzel/pm2-devmon.git"
-  },
-  "author": "Alex Zelensky <alexzgit@gmail.com> (https://github.com/alexzel)",
+  "bugs": "https://github.com/alexzel/pm2-devmon/issues",
+  "repository": "https://github.com/alexzel/pm2-devmon.git",
+  "author": "Alex Zelensky",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./lib",
@@ -49,9 +44,11 @@
   "files": [
     "lib",
     "bin",
-    "test",
-    "yarn.lock"
+    "test"
   ],
+  "directories": {
+    "test": "test"
+  },
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
   },
