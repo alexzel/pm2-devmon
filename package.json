@@ -1,6 +1,6 @@
 {
   "name": "pm2-devmon",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "PM2 development environment monitor",
   "keywords": [
     "cli",
