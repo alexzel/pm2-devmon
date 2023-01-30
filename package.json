@@ -30,7 +30,7 @@
     "type": "git",
     "url": "git+https://github.com/alexzel/pm2-devmon.git"
   },
-  "author": "Alex Zelensky",
+  "author": "Alex Zelensky <alexzgit@gmail.com> (https://github.com/alexzel)",
   "license": "MIT",
   "scripts": {
     "lint": "eslint ./lib",
@@ -68,5 +68,8 @@
   },
   "dependencies": {
     "yargs": "^17.6.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
