@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.0](https://github.com/alexzel/pm2-devmon/compare/v1.3.8...v1.4.0) (2023-01-29)
+
+  * Revert .github in package.json
+
 ## [1.3.8](https://github.com/alexzel/pm2-devmon/compare/v1.3.7...v1.3.8) (2023-01-29)
 
   * Add .github file into package.json file
