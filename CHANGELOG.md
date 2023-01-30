@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.1](https://github.com/alexzel/pm2-devmon/compare/v1.3.0...v1.3.1) (2023-01-29)
+
+  * Add test folder into npmignore list
+
 ## [1.3.0](https://github.com/alexzel/pm2-devmon/compare/v1.2.4...v1.3.0) (2023-01-29)
 
   * Remove files section, add directories section, and add npmignore file
