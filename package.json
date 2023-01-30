@@ -49,7 +49,8 @@
   "files": [
     "lib",
     "bin",
-    "test"
+    "test",
+    "yarn.lock"
   ],
   "bin": {
     "pm2-devmon": "./bin/pm2-devmon"
