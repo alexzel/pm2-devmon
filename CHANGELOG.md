@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.3](https://github.com/alexzel/pm2-devmon/compare/v1.4.2...v1.4.3) (2023-01-29)
+
+  * Revert examples adding into files list
+
 ## [1.4.2](https://github.com/alexzel/pm2-devmon/compare/v1.4.1...v1.4.2) (2023-01-29)
 
   * Include examples into files list
