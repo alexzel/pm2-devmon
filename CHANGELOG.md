@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.2](https://github.com/alexzel/pm2-devmon/compare/v1.4.1...v1.4.2) (2023-01-29)
+
+  * Include examples into files list
+
 ## [1.4.1](https://github.com/alexzel/pm2-devmon/compare/v1.4.0...v1.4.1) (2023-01-29)
 
   * Add link examples link into readme file
