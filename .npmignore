@@ -22,3 +22,4 @@ tmp
 .github
 .npm
 yarn.lock
+test
