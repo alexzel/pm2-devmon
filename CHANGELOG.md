@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.4.6](https://github.com/alexzel/pm2-devmon/compare/v1.4.5...v1.4.6) (2023-04-07)
+
+  * Regenerate yarn.lock file
+  * Bump dependencies
+
 ## [1.4.5](https://github.com/alexzel/pm2-devmon/compare/v1.4.4...v1.4.5) (2023-01-29)
 
   * Remove travis file and cleanup package.json
