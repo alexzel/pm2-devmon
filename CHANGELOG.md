@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.9](https://github.com/alexzel/pm2-devmon/compare/v1.4.8...v1.4.9) (2023-05-15)
+
+  * Regenerate yarn lock to get rid of security alert
+  * Bump dependencies
+  * Simplify config file in the example server
+
 ## [1.4.8](https://github.com/alexzel/pm2-devmon/compare/v1.4.7...v1.4.8) (2023-04-22)
 
   * Bump dependencies and regenerate yarn lock to silence security alert
