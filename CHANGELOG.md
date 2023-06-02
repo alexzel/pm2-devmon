@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.10](https://github.com/alexzel/pm2-devmon/compare/v1.4.9...v1.4.10) (2023-06-02)
+
+  * Regenerate yarn lock file
+  * Bump dependencies
+  * Update package description
+
 ## [1.4.9](https://github.com/alexzel/pm2-devmon/compare/v1.4.8...v1.4.9) (2023-05-15)
 
   * Regenerate yarn lock to get rid of security alert
