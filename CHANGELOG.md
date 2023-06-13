@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.5.0](https://github.com/alexzel/pm2-devmon/compare/v1.4.10...v1.5.0) (2023-06-12)
+
+  * Update readme and cmd description
+  * Fix ignore flag for scripts and add --ext and --delay options
+
 ## [1.4.10](https://github.com/alexzel/pm2-devmon/compare/v1.4.9...v1.4.10) (2023-06-02)
 
   * Regenerate yarn lock file

@@ -1,6 +1,6 @@
 {
   "name": "pm2-devmon",
-  "version": "1.4.10",
+  "version": "1.5.0",
   "description": "PM2 development environment monitor running in independent mode",
   "keywords": [
     "cli",
