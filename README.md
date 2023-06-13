@@ -40,11 +40,22 @@ See [examples](./examples/) for more details.
 
 ## Options
 
-```
+```sh
+$ pm2-devmon start --help
+
+pm2-devmon start <cmd> [-r] [-e name] [-i files] [-x extensions] [-d delay]
+
+Start PM2 development monitor
+
+Positionals:
+  cmd  PM2 config file or script or shell command            [string] [required]
+
 Options:
   -r, --raw      Raw output                           [boolean] [default: false]
   -e, --env      Environment name from env_[name]         [string] [default: ""]
   -i, --ignore   Files list to ignore watching             [array] [default: []]
+  -x, --ext      Comma separated list of file extensions  [string] [default: ""]
+  -d, --delay    Restart delay                          [number] [default: 2500]
   -v, --version  Show version number                                   [boolean]
-  -h, --help     Show help                                             [boolean]
+  -h, --help     Show help
 ```
