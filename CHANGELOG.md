@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.1](https://github.com/alexzel/pm2-devmon/compare/v1.5.0...v1.5.1) (2024-04-07)
+
+  * Regenerate yarn lock file
+  * Bump dependencies
+  * Bump depndencies and regenerate yarn lock file
+
 ## [1.5.0](https://github.com/alexzel/pm2-devmon/compare/v1.4.10...v1.5.0) (2023-06-12)
 
   * Update readme and cmd description
